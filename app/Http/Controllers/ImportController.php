@@ -252,8 +252,8 @@ xml;
     <establiment>
         <nom>I Love Japo</nom>
         <descripcio>
-            <cat>I Love Japo és un restaurant japonés que et porta un trosset de Japón a Mallorca. Un restaurant que et captivarà per la seva original decoració i l'alegria que desprèn. L'equip d'I Love Japo porta 5 anys situat al barri de Santa Catalina oferint una oferta única: sushi i menjar japonès amb una bona relación qualitat-preu. Per la seva ubicació en una zona de gran activitat, resulta ideal per endinsar-se i descobrir les diverses propostes i combinacions de la seva fantàstica carta. La gastronoia i cultura japonesa es revelen en els seus plats. Des del sushi tradicional, els futomakis tempuritzats o degustant l'autèntica cuina típica de les tavernes japoneses, com els takoyaki, les gyozas o les tradicionals broquetes (kushiyaki) fins a arribar a les postres perquè visquis una experiència inoblidable.</cat>
-            <esp>I Love Japo es un restaurante japonés que te trae un trocito de Japón a Mallorca. Un restaurante que te cautivará por su original decoración y la alegría que desprende. El equipo de I Love Japo lleva 5 años situado en el barrio de Santa Catalina ofreciendo una oferta única: sushi y comida japonesa con una buena relación calidad-precio. Por su ubicación en una zona de gran actividad, resulta ideal para adentrarse y descubrir las diversas propuestas y combinaciones de su fantástica carta. La gastronomía y cultura japonesa se revelan en sus platos. Desde el sushi tradicional, los futomakis tempurizados o degustando la auténtica comida típica de las tabernas japonesas, como los takoyaki, las gyozas o las tradicionales brochetas (kushiyaki) hasta llegar a los postres para que vivas una experiencia inolvidable. </esp>
+            <cat>I Love Japo és un restaurant japonés que et porta un trosset de Japón a Mallorca. Un restaurant que et captivarà per la seva original decoració i l'alegria que desprèn. L'equip d'I Love Japo porta 5 anys situat al barri de Santa Catalina oferint una oferta única: sushi i menjar japonès amb una bona relación qualitat-preu. Per la seva ubicació en una zona de gran activitat, resulta ideal per endinsar-se i descobrir les diverses propostes i combinacions de la seva fantàstica carta. La gastronoia i cultura japonesa es revelen en els seus plats. Des del sushi tradicional, els futomakis tempuritzats o degustant l'autèntica cuina típica de les tavernes japoneses, com els takoyaki, les gyozas o les tradicionals broquetes (kushiyaki) fins a arribar a les postres perquè visquis una experiència inoblidable.</cat>
+            <esp>I Love Japo es un restaurante japonés que te trae un trocito de Japón a Mallorca. Un restaurante que te cautivará por su original decoración y la alegría que desprende. El equipo de I Love Japo lleva 5 años situado en el barrio de Santa Catalina ofreciendo una oferta única: sushi y comida japonesa con una buena relación calidad-precio. Por su ubicación en una zona de gran actividad, resulta ideal para adentrarse y descubrir las diversas propuestas y combinaciones de su fantástica carta. La gastronomía y cultura japonesa se revelan en sus platos. Desde el sushi tradicional, los futomakis tempurizados o degustando la auténtica comida típica de las tabernas japonesas, como los takoyaki, las gyozas o las tradicionales brochetas (kushiyaki) hasta llegar a los postres para que vivas una experiencia inolvidable. </esp>
         </descripcio>
         <horari>
             <cat>Tots els dies de 13:30 a 15:30h.</cat>
@@ -751,6 +751,7 @@ xml;
         foreach ( $tipuss as $item ) {
             $sqls[] = "insert into tipus_cuina VALUES(NULL, \"$item\");";
         }
+        dd($sqls);
         foreach ( $sqls as $sql ) {
             DB::insert( $sql );
         }
@@ -764,8 +765,8 @@ xml;
     <establiment>
         <nom>I Love Japo</nom>
         <descripcio>
-            <cat>I Love Japo és un restaurant japonés que et porta un trosset de Japón a Mallorca. Un restaurant que et captivarà per la seva original decoració i l'alegria que desprèn. L'equip d'I Love Japo porta 5 anys situat al barri de Santa Catalina oferint una oferta única: sushi i menjar japonès amb una bona relación qualitat-preu. Per la seva ubicació en una zona de gran activitat, resulta ideal per endinsar-se i descobrir les diverses propostes i combinacions de la seva fantàstica carta. La gastronoia i cultura japonesa es revelen en els seus plats. Des del sushi tradicional, els futomakis tempuritzats o degustant l'autèntica cuina típica de les tavernes japoneses, com els takoyaki, les gyozas o les tradicionals broquetes (kushiyaki) fins a arribar a les postres perquè visquis una experiència inoblidable.</cat>
-            <esp>I Love Japo es un restaurante japonés que te trae un trocito de Japón a Mallorca. Un restaurante que te cautivará por su original decoración y la alegría que desprende. El equipo de I Love Japo lleva 5 años situado en el barrio de Santa Catalina ofreciendo una oferta única: sushi y comida japonesa con una buena relación calidad-precio. Por su ubicación en una zona de gran actividad, resulta ideal para adentrarse y descubrir las diversas propuestas y combinaciones de su fantástica carta. La gastronomía y cultura japonesa se revelan en sus platos. Desde el sushi tradicional, los futomakis tempurizados o degustando la auténtica comida típica de las tabernas japonesas, como los takoyaki, las gyozas o las tradicionales brochetas (kushiyaki) hasta llegar a los postres para que vivas una experiencia inolvidable. </esp>
+            <cat>I Love Japo és un restaurant japonés que et porta un trosset de Japón a Mallorca. Un restaurant que et captivarà per la seva original decoració i l'alegria que desprèn. L'equip d'I Love Japo porta 5 anys situat al barri de Santa Catalina oferint una oferta única: sushi i menjar japonès amb una bona relación qualitat-preu. Per la seva ubicació en una zona de gran activitat, resulta ideal per endinsar-se i descobrir les diverses propostes i combinacions de la seva fantàstica carta. La gastronoia i cultura japonesa es revelen en els seus plats. Des del sushi tradicional, els futomakis tempuritzats o degustant l'autèntica cuina típica de les tavernes japoneses, com els takoyaki, les gyozas o les tradicionals broquetes (kushiyaki) fins a arribar a les postres perquè visquis una experiència inoblidable.</cat>
+            <esp>I Love Japo es un restaurante japonés que te trae un trocito de Japón a Mallorca. Un restaurante que te cautivará por su original decoración y la alegría que desprende. El equipo de I Love Japo lleva 5 años situado en el barrio de Santa Catalina ofreciendo una oferta única: sushi y comida japonesa con una buena relación calidad-precio. Por su ubicación en una zona de gran actividad, resulta ideal para adentrarse y descubrir las diversas propuestas y combinaciones de su fantástica carta. La gastronomía y cultura japonesa se revelan en sus platos. Desde el sushi tradicional, los futomakis tempurizados o degustando la auténtica comida típica de las tabernas japonesas, como los takoyaki, las gyozas o las tradicionales brochetas (kushiyaki) hasta llegar a los postres para que vivas una experiencia inolvidable. </esp>
         </descripcio>
         <horari>
             <cat>Tots els dies de 13:30 a 15:30h.</cat>
@@ -985,8 +986,8 @@ xml;
     <establiment>
         <nom>Racó de la Bona Cuina</nom>
         <descripcio>
-            <cat>Racó de la Bona Cuina és un restaurant agradable i de tracte familiar on poder gaudir d'uns arrossos fantàstics i uns menús diaris molt elaborats segons mercat. Als matins, ofereixen uns esmorzars molt complets a molt bon preu, i per les tardes posen a la teva disposició la seva terrassa al costat de la Plaça d'Espanya on poder prendre uns gelats, un te o refrescos, i atenció, totes les begudes van acompanyades d'una tapa diferent que el xef prepara amb afecte per als seus clients. Disposen de tot això en un ambient familiar i agradable on el lema corporatiu és "la qualitat no està renyida amb el preu" i la seva màxima, sempre cuinar amb afecte.</cat>
-            <esp>Racó de la Bona Cuina es una restaurante agradable y de trato familiar donde poder disfrutar de unos arroces estupendos y unos menús diarios muy elaborados según mercado. Por las mañanas, ofrecen unos desayunos muy completos a muy buen precio, y por las tardes ponen a tu disposición su terraza al lado de la Plaza de España donde poder tomar unos helados, un té o refrescos, y atención, todas las bebidas van acompañadas de una tapa diferente que el chef prepara con cariño para sus clientes. Disponen de todo esto en un ambiente familiar y agradable donde el lema corporativo es "la calidad no está reñida con el precio" y su máxima, siempre cocinar con cariño. </esp>
+            <cat>Racó de la Bona Cuina és un restaurant agradable i de tracte familiar on poder gaudir d'uns arrossos fantàstics i uns menús diaris molt elaborats segons mercat. Als matins, ofereixen uns esmorzars molt complets a molt bon preu, i per les tardes posen a la teva disposició la seva terrassa al costat de la Plaça d'Espanya on poder prendre uns gelats, un te o refrescos, i atenció, totes les begudes van acompanyades d'una tapa diferent que el xef prepara amb afecte per als seus clients. Disposen de tot això en un ambient familiar i agradable on el lema corporatiu és la qualitat no està renyida amb el preu i la seva màxima, sempre cuinar amb afecte.</cat>
+            <esp>Racó de la Bona Cuina es una restaurante agradable y de trato familiar donde poder disfrutar de unos arroces estupendos y unos menús diarios muy elaborados según mercado. Por las mañanas, ofrecen unos desayunos muy completos a muy buen precio, y por las tardes ponen a tu disposición su terraza al lado de la Plaza de España donde poder tomar unos helados, un té o refrescos, y atención, todas las bebidas van acompañadas de una tapa diferente que el chef prepara con cariño para sus clientes. Disponen de todo esto en un ambiente familiar y agradable donde el lema corporativo es la calidad no está reñida con el precio y su máxima, siempre cocinar con cariño. </esp>
         </descripcio>
         <horari>
             <cat>Dilluns de 8 a 16h i de dimecres a diumenge de 12 a 23:30h. Dimarts tancat.</cat>
@@ -1257,40 +1258,39 @@ xml;
         $tmp      = '';
         $contador = 0;
         foreach ( $xml as $key => $establiment ) {
-            $out[ $contador ][ 'nom' ]            = $establiment->nom->__toString();
-            $out[ $contador ][ 'descripcio_cat' ] = $establiment->descripcio->cat->__toString();
-            $out[ $contador ][ 'descripcio_esp' ] = $establiment->descripcio->esp->__toString();
-            $out[ $contador ][ 'horari_cat' ]     = $establiment->horari->cat->__toString();
-            $out[ $contador ][ 'horari_esp' ]     = $establiment->horari->esp->__toString();
-            $out[ $contador ][ 'poblacio' ]       = $establiment->contacte->poblacio->__toString();
-            $out[ $contador ][ 'adreca' ]         = $establiment->contacte->adreca->__toString();
-            $out[ $contador ][ 'telefon' ]        = $establiment->contacte->telefon->__toString();
-            $out[ $contador ][ 'web' ]            = $establiment->contacte->web->__toString();
-            $out[ $contador ][ 'preu' ]           = $establiment->preu->__toString();
+            $out[ $contador ][ 'nom' ]            = "\"" . $establiment->nom->__toString() . "\"";
+            $out[ $contador ][ 'descripcio_cat' ] = "\"" . $establiment->descripcio->cat->__toString() . "\"";
+            $out[ $contador ][ 'descripcio_esp' ] = "\"" . $establiment->descripcio->esp->__toString() . "\"";
+            $out[ $contador ][ 'horari_cat' ]     = "\"" . $establiment->horari->cat->__toString() . "\"";
+            $out[ $contador ][ 'horari_esp' ]     = "\"" . $establiment->horari->esp->__toString() . "\"";
+            $out[ $contador ][ 'poblacio' ]       = "\"" . $establiment->contacte->poblacio->__toString() . "\"";
+            $out[ $contador ][ 'adreca' ]         = "\"" . $establiment->contacte->adreca->__toString() . "\"";
+            $out[ $contador ][ 'telefon' ]        = "\"" . $establiment->contacte->telefon->__toString() . "\"";
+            $out[ $contador ][ 'web' ]            = "\"" . $establiment->contacte->web->__toString() . "\"";
+            $out[ $contador ][ 'preu' ]           = "\"" . $establiment->preu->__toString() . "\"";
             foreach ( $establiment->tipusCuina->tipus as $tipusCuina ) {
                 $tmp .= $tipusCuina . ', ';
             }
-            $tmp = rtrim($tmp, ",");
-            $out[ $contador ][ 'tipus_cuina' ] = $tmp;
+            $tmp                               = rtrim( $tmp, "," );
+            $out[ $contador ][ 'tipus_cuina' ] = "\"" . $tmp . "\"";
             $tmp                               = '';
             $contador++;
         }
-        $sql = '(NULL, ';
+        $sql = '("NULL", ';
         foreach ( $out as $item ) {
             $sql = '(NULL, ';
-            foreach ( $item as $item2 ) {
-                $sql .= "\"" . $item2 . "\", ";
-            }
+            $sql .= implode( ", ", $item );
+            //            foreach ( $item as $item2 ) {
+            //                $sql .= "\"" . $item2 . "\", ";
+            //            }
             $sql .= ");";
-            echo '$sql ' . $sql . '<br />';
-//            $sql = str_replace("\", )", ")", $sql);
-            $sqls[] = "INSERT INTO establiments VALUES $sql";
+            $sqls[] = "insert into establiments VALUES$sql";
         }
-        echo '<pre>$sqls' . print_r( $sqls, true ) . '</pre>';
-        #    [0] => INSERT INTO establiments VALUES (NULL, "I Love Japo", "I Love Japo és un restaurant japonés que et porta un trosset de Japón a Mallorca. Un restaurant que et captivarà per la seva original decoració i l'alegria que desprèn. L'equip d'I Love Japo porta 5 anys situat al barri de Santa Catalina oferint una oferta única: sushi i menjar japonès amb una bona relación qualitat-preu. Per la seva ubicació en una zona de gran activitat, resulta ideal per endinsar-se i descobrir les diverses propostes i combinacions de la seva fantàstica carta. La gastronoia i cultura japonesa es revelen en els seus plats. Des del sushi tradicional, els futomakis tempuritzats o degustant l'autèntica cuina típica de les tavernes japoneses, com els takoyaki, les gyozas o les tradicionals broquetes (kushiyaki) fins a arribar a les postres perquè visquis una experiència inoblidable.", "I Love Japo es un restaurante japonés que te trae un trocito de Japón a Mallorca. Un restaurante que te cautivará por su original decoración y la alegría que desprende. El equipo de I Love Japo lleva 5 años situado en el barrio de Santa Catalina ofreciendo una oferta única: sushi y comida japonesa con una buena relación calidad-precio. Por su ubicación en una zona de gran actividad, resulta ideal para adentrarse y descubrir las diversas propuestas y combinaciones de su fantástica carta. La gastronomía y cultura japonesa se revelan en sus platos. Desde el sushi tradicional, los futomakis tempurizados o degustando la auténtica comida típica de las tabernas japonesas, como los takoyaki, las gyozas o las tradicionales brochetas (kushiyaki) hasta llegar a los postres para que vivas una experiencia inolvidable. ", "Tots els dies de 13:30 a 15:30h.", "Todos los días de 13:30 a 15:30h.", "Palma", "c/ Sant Magí, 25", "971738321", "www.ilovejapo.com/", "entre 20 i 25 €", "japonès, asiàtic, ", );
-        //        foreach ( $sqls as $item ) {
-//            DB::insert( $item );
-//        }
+//        dd($sqls);
+        foreach ( $sqls as $item ) {
+            DB::insert( $item );
+        }
+        return 0;
     }
     
 }

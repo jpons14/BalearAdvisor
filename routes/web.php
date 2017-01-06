@@ -29,13 +29,13 @@ Route::get('/comentaris', 'CommentController@index');
 
 Route::get('/see/comentaris', 'SeeController@comentaris');
 
-Route::get('/import/comentaris', 'ImportController@comentaris');
-
-Route::get('/import/usuaris', 'ImportController@usuaris');
-
-Route::get('/import/tipusCuina', 'ImportController@tipusCuina');
-
-Route::get('/import/establiments', 'ImportController@establiments');
+//Route::get('/import/comentaris', 'ImportController@comentaris');
+//
+//Route::get('/import/usuaris', 'ImportController@usuaris');
+//
+//Route::get('/import/tipusCuina', 'ImportController@tipusCuina');
+//
+//Route::get('/import/establiments', 'ImportController@establiments');
 
 Route::get('/contact', array('uses' => 'FrontendController@contactShow', 'as' => 'frontend.contact'));
 
@@ -46,6 +46,8 @@ Route::get('/backend/index', 'BackendController@index');
 Route::get('/backend/users', 'BackendController@usersList');
 
 Route::get('/backend/comentaris', 'BackendController@comentarisList');
+
+//Route::get('/backend/establiments')
 
 Route::get('/user/edit/{id}', 'BackendController@userEdit');
 Route::post('/user/update/', 'BackendController@userUpdate');

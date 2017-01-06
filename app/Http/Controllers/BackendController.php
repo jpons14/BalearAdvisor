@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\ComentarisModel;
+use App\EstablimentModel;
 use App\User;
 use App\UserModel;
 //use Illuminate\Http\Request;
@@ -24,6 +25,11 @@ class BackendController extends Controller
         $message = Session::get('message');
         return view('backend.comentaris')->with('comments', ComentarisModel::all())->with('message', $message);
     }
+    
+    public function establimentsList(){
+        $message = Session::get('message');
+        return view('backend.establiments')->with('establiments', EstablimentModel::all())->with('message', $message);
+    }
 
     public function userEdit( $id ) {
         return view( 'backend.userEdit' )
@@ -37,6 +43,10 @@ class BackendController extends Controller
             ->with('comments', json_encode(ComentarisModel::where('id', $id)->take(1)->get()))
             ->with('id', $id)
             ->with('users', $users);
+    }
+    
+    public function establimentEdit(  ) {
+        
     }
 
     /**
