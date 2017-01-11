@@ -14,7 +14,7 @@ class LoginController extends Controller
     }
 
     public function login() {
-        $users = UserModel::where( 'email', $_POST[ 'email' ] )->take( 1 )->get();
+        $users = UserModel::where( 'email', $_POST[ 'email' ] )->where('password', $_POST['password'])->take( 1 )->get();
         $users = json_decode( $users );
         if ( count( $users ) > 0 ) {
             session_start();
@@ -22,5 +22,12 @@ class LoginController extends Controller
         } else {
             return redirect( 'login' )->withCookie( cookie( 'login', 'fail' ) );
         }
+    }
+
+    public function logout()
+    {
+        unset($_COOKIE['PHPSESSID']);
+//        session_destroy();
+        return redirect('/login')->withCookie(cookie('message', 'logged out'));
     }
 }

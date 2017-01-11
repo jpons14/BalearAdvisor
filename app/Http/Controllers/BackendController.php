@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\ComentarisModel;
 use App\EstablimentModel;
+use App\TipusCuinaModel;
 use App\User;
 use App\UserModel;
 //use Illuminate\Http\Request;
@@ -27,8 +28,10 @@ class BackendController extends Controller
     }
     
     public function establimentsList(){
-        $message = Session::get('message');
-        return view('backend.establiments')->with('establiments', EstablimentModel::all())->with('message', $message);
+//        $message = Session::get('message');
+        return view('backend.establiments')->with('establiments', EstablimentModel::all());
+//            ->with('message', $message);
+//        return EstablimentModel::all();
     }
 
     public function userEdit( $id ) {
@@ -45,8 +48,12 @@ class BackendController extends Controller
             ->with('users', $users);
     }
     
-    public function establimentEdit(  ) {
-        
+    public function establimentEdit( $id ) {
+        $tipusCuina = TipusCuinaModel::all();
+        return view('backend.establientsEdit')
+            ->with('establiments', json_encode(EstablimentModel::where('id', $id)->take(1)->get()))
+            ->with('id', $id)
+            ->with('tipusCuina', $tipusCuina);
     }
 
     /**
@@ -66,4 +73,38 @@ class BackendController extends Controller
         $comment->update($input);
         return redirect('/backend/comentaris')->with('message', 'updated successfully');
     }
+
+    public function establimentUpdate( Request $request)
+    {
+        $input = Request::all();
+//        dd($input);
+        $establiment = EstablimentModel::find($input['id']);
+        $establiment->update($input);
+        return redirect('/backend/establiments')->with('message', 'updated successfully');
+    }
+
+    public function commentCreate()
+    {
+        $input = Request::all();
+        ComentarisModel::create($input);
+        return redirect('/backend/comentaris')->with('message', 'created successfully');
+    }
+
+    public function commentsAddForm()
+    {
+        return view('backend.commentsAddForm');
+    }
+
+    public function usersCreateForm()
+    {
+        return view('backend.usersCreateForm');
+    }
+
+    public function userCreate()
+    {
+        $input = Request::all();
+        UserModel::create($input);
+        return redirect('/backend/users')->with('message', 'User created successfully');
+    }
+
 }

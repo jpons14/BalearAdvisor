@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/login.css">
     <script src="/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/toast.css" />
+    <link rel="stylesheet" href="/css/toast.css"/>
 
 </head>
 <body>
@@ -53,8 +53,15 @@
 
 <?php
 use Illuminate\Support\Facades\Cookie;
-if ( Cookie::get('login') == 'fail')
-echo '<div id="snackbar">Invalid Login</div>';
+//if ( Cookie::get('login') == 'fail')
+//        dd($_COOKIE);
+//if (isset($_COOKIE['message']))
+    echo '<div id="snackbar">' . Cookie::get('message') . '</div>';
 ?>
+<script>
+    setTimeout(function () {
+        document.getElementById('snackbar').style.display = 'none';
+    }, 2000);
+</script>
 </body>
 </html>

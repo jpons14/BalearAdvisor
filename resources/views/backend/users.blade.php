@@ -2,7 +2,7 @@
 @section('title', 'Users Backend')
 @section('usersActive', 'active')
 @section('body')
-    <div class="container-fluid">
+    <div class="container">
     <div class="col-md-10">
         <table class="table">
             <thead>
@@ -33,4 +33,9 @@
     @if(isset($message))
         <div id="snackbar"> {{$message }} </div>
     @endif
+    <div class="container">
+        <div class="col-md-10">
+            <a href="/user/create/form" class="btn btn-default">Crear Usuari</a>
+        </div>
+    </div>
 @endsection

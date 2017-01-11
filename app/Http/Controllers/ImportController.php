@@ -751,7 +751,7 @@ xml;
         foreach ( $tipuss as $item ) {
             $sqls[] = "insert into tipus_cuina VALUES(NULL, \"$item\");";
         }
-        dd($sqls);
+//        dd($sqls);
         foreach ( $sqls as $sql ) {
             DB::insert( $sql );
         }
