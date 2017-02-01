@@ -45,27 +45,24 @@ Route::get('/contact', array('uses' => 'FrontendController@contactShow', 'as' =>
 
 Route::get('/backend/index', 'BackendController@index');
 
-Route::get('/backend/users', 'BackendController@usersList');
-
-
 Route::get('/backend/establiments', 'BackendController@establimentsList');
 
-Route::get('/user/edit/{id}', 'BackendController@userEdit');
 Route::post('/user/update/', 'BackendController@userUpdate');
-
-
-
-Route::get('/user/create/form', 'BackendController@usersCreateForm');
-Route::post('/user/create', 'BackendController@userCreate');
 
 Route::get('/establiment/edit/{id}', 'BackendController@establimentEdit');
 Route::post('/establiments/update', 'BackendController@establimentUpdate');
 
 Route::get('/tipuscuina/list', 'BackendController@tipusCuianList');
 
-
+// Comentaris
 Route::get('/backend/comentaris', 'Backend\CommentsController@index');
 Route::get('/comment/edit/{id}', 'Backend\CommentsController@edit');
 Route::get('/comments/add/form', 'Backend\CommentsController@add');
 Route::post('/comments/create', 'Backend\CommentsController@create');
 Route::post('/comments/update', 'Backend\CommentsController@update');
+
+// usuaris
+Route::get('/backend/users', 'Backend\UsersController@index');
+Route::get('/user/edit/{id}', 'Backend\UsersController@edit');
+Route::get('/user/create/form', 'Backend\UsersController@usersCreateForm');
+Route::post('/user/create', 'Backend\UsersController@create');

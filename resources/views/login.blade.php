@@ -52,11 +52,8 @@
 
 
 <?php
-use Illuminate\Support\Facades\Cookie;
-//if ( Cookie::get('login') == 'fail')
-//        dd($_COOKIE);
-//if (isset($_COOKIE['message']))
-    echo '<div id="snackbar">' . Cookie::get('message') . '</div>';
+if ( isset( $message ) )
+    echo '<div id="snackbar" style="color: #FFF;">' . $message . '</div>';
 ?>
 <script>
     setTimeout(function () {
