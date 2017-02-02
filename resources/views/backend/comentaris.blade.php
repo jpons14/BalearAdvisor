@@ -27,7 +27,7 @@
                         <td>{{$comment->data}}</td>
                         <td>{{$comment->hora}}</td>
                         <td><a href="/comment/edit/{{$comment->id}}"><i class="fa fa-pencil"></i> </a></td>
-                        <td><a href="#"><i class="fa fa-times"></i> </a></td>
+                        <td><a href="/comments/delete/{{$comment->id}}"><i class="fa fa-times"></i> </a></td>
                     </tr>
                 @endforeach
                 </tbody>

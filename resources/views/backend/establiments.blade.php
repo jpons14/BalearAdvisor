@@ -34,4 +34,10 @@
             </table>
         </div>
     </div>
+    <br/>
+    <div class="container">
+        <div class="col-md-10">
+            <a href="/establiments/create"><button class="btn btn-default">Crea un nou establiment</button></a>
+        </div>
+    </div>
 @endsection

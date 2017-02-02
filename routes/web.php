@@ -45,12 +45,10 @@ Route::get('/contact', array('uses' => 'FrontendController@contactShow', 'as' =>
 
 Route::get('/backend/index', 'BackendController@index');
 
-Route::get('/backend/establiments', 'BackendController@establimentsList');
 
 Route::post('/user/update/', 'BackendController@userUpdate');
 
-Route::get('/establiment/edit/{id}', 'BackendController@establimentEdit');
-Route::post('/establiments/update', 'BackendController@establimentUpdate');
+
 
 Route::get('/tipuscuina/list', 'BackendController@tipusCuianList');
 
@@ -60,9 +58,17 @@ Route::get('/comment/edit/{id}', 'Backend\CommentsController@edit');
 Route::get('/comments/add/form', 'Backend\CommentsController@add');
 Route::post('/comments/create', 'Backend\CommentsController@create');
 Route::post('/comments/update', 'Backend\CommentsController@update');
+Route::get('/comments/delete/{id}', 'Backend\CommentsController@delete');
 
-// usuaris
+// Usuaris
 Route::get('/backend/users', 'Backend\UsersController@index');
 Route::get('/user/edit/{id}', 'Backend\UsersController@edit');
 Route::get('/user/create/form', 'Backend\UsersController@usersCreateForm');
 Route::post('/user/create', 'Backend\UsersController@create');
+
+// Establiments
+Route::get('/backend/establiments', 'Backend\EstablimentsController@index');
+Route::get('/establiment/edit/{id}', 'Backend\EstablimentsController@edit');
+Route::post('/establiments/update', 'Backend\EstablimentsController@update');
+Route::get('/establiments/create', 'Backend\EstablimentsController@create');
+Route::post('/establiments/add', 'Backend\EstablimentsController@add');
