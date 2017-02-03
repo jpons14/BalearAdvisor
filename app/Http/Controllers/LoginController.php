@@ -27,10 +27,9 @@ class LoginController extends Controller
         }
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        unset($_COOKIE['PHPSESSID']);
-//        session_destroy();
+        $request->session()->set('login', false);
         return redirect('/login')->withCookie(cookie('message', 'logged out'));
     }
 }

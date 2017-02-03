@@ -17,7 +17,7 @@ class CommentsController extends Controller
             $message = Session::get( 'message' );
             return view( 'backend.comentaris' )->with( 'comments', ComentarisModel::all() )->with( 'message', $message );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function edit( $id, Request $request )
@@ -29,7 +29,7 @@ class CommentsController extends Controller
                 ->with( 'id', $id )
                 ->with( 'users', $users );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
 
@@ -41,7 +41,7 @@ class CommentsController extends Controller
             $comment->update( $input );
             return redirect( '/backend/comentaris' )->with( 'message', 'updated successfully' );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function create( Request $request )
@@ -51,7 +51,7 @@ class CommentsController extends Controller
             ComentarisModel::create( $input );
             return redirect( '/backend/comentaris' )->with( 'message', 'created successfully' );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function add( Request $request )
@@ -59,7 +59,7 @@ class CommentsController extends Controller
         if ( Functions::isLogged( $request ) ) {
             return view( 'backend.commentsAddForm' );
         } else {
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
         }
     }
 
@@ -69,7 +69,7 @@ class CommentsController extends Controller
             ComentarisModel::destroy($id);
             return redirect('/backend/comentaris')->with('message', 'deleted successfully');
         } else
-            return redirect('/login');
+            return redirect('/login')->with('message', 'You don\' have permissions');
     }
 
 }

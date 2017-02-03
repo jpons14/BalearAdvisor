@@ -16,7 +16,7 @@ class EstablimentsController extends Controller
         if ( Functions::isLogged( $request ) )
             return view( 'backend.establiments' )->with( 'establiments', EstablimentModel::all() );
         else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function edit( $id, Request $request )
@@ -28,7 +28,7 @@ class EstablimentsController extends Controller
                 ->with( 'id', $id )
                 ->with( 'tipusCuina', $tipusCuina );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function update( Request $request )
@@ -39,7 +39,7 @@ class EstablimentsController extends Controller
             $establiment->update( $input );
             return redirect( '/backend/establiments' )->with( 'message', 'updated successfully' );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function create( Request $request )
@@ -48,19 +48,26 @@ class EstablimentsController extends Controller
             $tipusCuina = TipusCuinaModel::all();
             return view( 'backend.establientsCreate' )->with( 'tipusCuina', $tipusCuina );
         } else
-            return redirect( '/login' );
+            return redirect('/login')->with('message', 'you don\'t have permission');
     }
 
     public function add( Request $request )
     {
         if ( Functions::isLogged( $request ) ) {
             $input = RequestInputs::all();
-//            dd($input);
-
             EstablimentModel::create( $input );
             return redirect( '/backend/establiments' )->with( 'message', 'Establiment created successfully' );
         } else
-            return redirect( '/login' );
+            return redirect( '/login' )->with('message', 'You don\' have permissions');
+    }
+
+    public function delete( $id, Request $request )
+    {
+        if (Functions::isLogged($request)){
+            EstablimentModel::destroy($id);
+            return redirect('/backend/establiments')->with('message', 'Establiment deleted successfully');
+        } else
+            return redirect('/login')->with('message', 'You don\' have permissions');
     }
 
 }

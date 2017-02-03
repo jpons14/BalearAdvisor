@@ -49,6 +49,7 @@ if (!isset($_COOKIE['PHPSESSID']))
                 </li>
                 <li class="@yield('usersActive')"><a href="/backend/users">Users</a></li>
                 <li class="@yield('establimentsAcitve')"><a href="/backend/establiments">Establiments</a></li>
+                <li class="@yield('tipusCuinaActive')"><a href="/backend/tipuscuina">Tipues Cuina</a></li>
             </ul>
             <form class="navbar-form navbar-left">
                 <div class="form-group">
@@ -57,18 +58,8 @@ if (!isset($_COOKIE['PHPSESSID']))
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logout">logout</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
+                <li><a href="/logout">Logout</a></li>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

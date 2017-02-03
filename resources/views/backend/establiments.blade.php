@@ -27,7 +27,7 @@
                         <td>{{$establiment->web}}</td>
                         <td>{{$establiment->telefon}}</td>
                         <td><a href="/establiment/edit/{{$establiment->id}}"><i class="fa fa-pencil"></i> </a></td>
-                        <td><a href="#"><i class="fa fa-times"></i> </a></td>
+                        <td><a href="/establiment/delete/{{$establiment->id}}"><i class="fa fa-times"></i> </a></td>
                     </tr>
                 @endforeach
                 </tbody>

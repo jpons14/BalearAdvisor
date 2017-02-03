@@ -23,7 +23,7 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->password}}</td>
                     <td><a href="/user/edit/{{$user->id}}"><i class="fa fa-pencil"></i> </a></td>
-                    <td><a href="#"><i class="fa fa-times"></i> </a></td>
+                    <td><a href="/user/delete/{{$user->id}}"><i class="fa fa-times"></i> </a></td>
                 </tr>
             @endforeach
             </tbody>

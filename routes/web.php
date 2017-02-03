@@ -65,6 +65,7 @@ Route::get('/backend/users', 'Backend\UsersController@index');
 Route::get('/user/edit/{id}', 'Backend\UsersController@edit');
 Route::get('/user/create/form', 'Backend\UsersController@usersCreateForm');
 Route::post('/user/create', 'Backend\UsersController@create');
+Route::get('/user/delete/{id}', 'Backend\UsersController@delete');
 
 // Establiments
 Route::get('/backend/establiments', 'Backend\EstablimentsController@index');
@@ -72,3 +73,10 @@ Route::get('/establiment/edit/{id}', 'Backend\EstablimentsController@edit');
 Route::post('/establiments/update', 'Backend\EstablimentsController@update');
 Route::get('/establiments/create', 'Backend\EstablimentsController@create');
 Route::post('/establiments/add', 'Backend\EstablimentsController@add');
+Route::get('/establiment/delete/{id}', 'Backend\EstablimentsController@delete');
+
+// Tipus cuina
+Route::get('/backend/tipuscuina', 'Backend\TipusCuinaController@index');
+Route::get('/tipuscuina/edit/{id}', 'Backend\TipusCuinaController@edit');
+Route::post('/tipuscuina/update', 'Backend\TipusCuinaController@update');
+Route::get('/tipuscuina/delete/{id}', 'Backend\TipusCuinaController@delete');
