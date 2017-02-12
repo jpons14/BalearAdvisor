@@ -16,6 +16,7 @@ class TipusCuina extends Migration
         Schema::create('tipus_cuina', function (Blueprint $table){
             $table->increments('id');
             $table->string('nom');
+            $table->foreign( FREEDESKTOP_XML_URL)
         });
     }
 

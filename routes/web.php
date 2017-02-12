@@ -11,10 +11,10 @@
 |
 */
 
+# Frontend
 
-Route::get('/', function () {
-    return view('frontend/index');
-});
+
+Route::get('/', 'Frontend\FrontendController@index');
 
 
 # Login

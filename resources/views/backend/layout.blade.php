@@ -25,7 +25,7 @@
 </head>
 <body>
 <?php
-if (!isset($_COOKIE['PHPSESSID']))
+if ( !isset( $_COOKIE[ 'PHPSESSID' ] ) )
     echo "<script>window.location.href = '/login'</script>";
 ?>
 <nav class="navbar navbar-default">
@@ -64,6 +64,7 @@ if (!isset($_COOKIE['PHPSESSID']))
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
 
 @yield('body')
 <script>

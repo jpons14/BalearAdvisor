@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -14,5 +14,10 @@ class FrontendController extends BaseController
     {
 //        return view ('frontend/index');
         return 'hola';
+    }
+
+    public function index(  )
+    {
+        return view('frontend.index');
     }
 }

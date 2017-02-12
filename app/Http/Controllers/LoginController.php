@@ -2,9 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\UserModel;
-use Illuminate\Cookie\CookieJar;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
@@ -12,14 +10,15 @@ class LoginController extends Controller
 
     public function index()
     {
-        $users = UserModel::where( 'email', 'jponspons@gmail.com' )->where( 'password', 'esselte14' )->take( 1 )->get();
-        $users = \GuzzleHttp\json_decode( $users );
         return view( 'login' )->with( 'message', Session::get( 'message' ) );
     }
 
     public function login( Request $request )
     {
-        $users = UserModel::where( 'email', $_POST[ 'email' ] )->where( 'password', $_POST[ 'password' ] )->take( 1 )->get();
+        $users = UserModel::where( 'email', $_POST[ 'email' ] )
+            ->where( 'password', $_POST[ 'password' ] )
+            ->take( 1 )
+            ->get();
         $users = json_decode( $users );
         if ( count( $users ) == 1 ) {
             session_start();
@@ -33,6 +32,6 @@ class LoginController extends Controller
     public function logout( Request $request )
     {
         $request->session()->set( 'login', false );
-        return redirect( '/login' )->with( 'message', 'logged out' );
+        return redirect( '/login' )->with( 'message', 'Logged out' );
     }
 }
