@@ -15,7 +15,8 @@
 
 
 Route::get('/', 'Frontend\FrontendController@index');
-
+Route::get('/restaurants', array('uses' => 'Frontend\FrontendController@restaurants', 'as' => 'frontend.restaurants'));
+Route::get('/contact', array('uses' => 'Frontend\FrontendController@contacte', 'as' => 'frontend.contact'));
 
 # Login
 
@@ -40,7 +41,6 @@ Route::get('/import/tipusCuina', 'ImportController@tipusCuina');
 //
 Route::get('/import/establiments', 'ImportController@establiments');
 
-Route::get('/contact', array('uses' => 'FrontendController@contactShow', 'as' => 'frontend.contact'));
 
 
 Route::get('/backend/index', 'BackendController@index');

@@ -1,5 +1,6 @@
-@include('frontend/header')
-
-<h1>Contact</h1>
-
-@include('frontend/footer')
+@extends('frontend.layout')
+@section('title', 'contacte')
+@section('contacteActive', 'active')
+@section('body')
+    <h1 class="text-center">Contact</h1>
+@endsection

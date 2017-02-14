@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\UserModel;
+use App\UsuariModelCati;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -15,11 +16,13 @@ class LoginController extends Controller
 
     public function login( Request $request )
     {
-        $users = UserModel::where( 'email', $_POST[ 'email' ] )
-            ->where( 'password', $_POST[ 'password' ] )
-            ->take( 1 )
-            ->get();
-        $users = json_decode( $users );
+        $usuaris = UsuariModelCati::where( 'email', $_POST[ 'email' ] )->where( 'password', $_POST[ 'password' ] )->take( 1 )->get();
+//        $users = UserModel::where( 'email', $_POST[ 'email' ] )
+//            ->where( 'password', $_POST[ 'password' ] )
+//            ->take( 1 )
+//            ->get();
+//        $users = json_decode( $users );
+        $users = json_decode( $usuaris );
         if ( count( $users ) == 1 ) {
             session_start();
             $request->session()->set( 'login', true );

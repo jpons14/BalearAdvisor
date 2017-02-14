@@ -20,13 +20,10 @@
                 <tbody>
                 @foreach($comments as $key => $comment)
                     <tr>
-                        <td>{{$comment->id}}</td>
                         <td>{{$comment->usuari}}</td>
                         <td>{{$comment->establiment}}</td>
-                        <td>{{$comment->text}}</td>
-                        <td>{{$comment->data}}</td>
-                        <td>{{$comment->hora}}</td>
-                        <td><a href="/comment/edit/{{$comment->id}}"><i class="fa fa-pencil"></i> </a></td>
+                        <td>{{$comment->dataHora}}</td>
+                        <td><a href="/comment/edit/{{$comment->usuari}}"><i class="fa fa-pencil"></i> </a></td>
                         <td><a href="/comments/delete/{{$comment->id}}"><i class="fa fa-times"></i> </a></td>
                     </tr>
                 @endforeach

@@ -10,14 +10,19 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class FrontendController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    public function contactShow()
-    {
-//        return view ('frontend/index');
-        return 'hola';
-    }
 
     public function index(  )
     {
         return view('frontend.index');
+    }
+
+    public function restaurants(  )
+    {
+        return view('frontend.restaurants');
+    }
+
+    public function contacte(  )
+    {
+        return view('frontend.contact');
     }
 }
