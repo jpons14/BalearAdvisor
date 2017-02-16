@@ -39,6 +39,9 @@
                     <input type="text" placeholder="preu" name="preu" class="form-control" />
                 </div>
                 <div class="form-group">
+                    <input type="text" placeholder="foto" name="foto" class="form-control" />
+                </div>
+                <div class="form-group">
                     <span class="text-warning col-md-12 text-center">Máximo 4 opciones</span>
                     <div class="col-md-3">
                         <select class="form-control tipuscuines" multiple name="">

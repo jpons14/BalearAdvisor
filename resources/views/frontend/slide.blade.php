@@ -1,5 +1,5 @@
 @extends('frontend.layout')
-@section('title', 'Home')
+@section('title', 'carrusel')
 @section('body')
     <div id="slideshowIndexFrontend" class="carousel slide" data-ride="carouse2">
         <!-- Indicators -->
@@ -39,5 +39,4 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
 @endsection

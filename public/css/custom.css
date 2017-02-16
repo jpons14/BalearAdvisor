@@ -1,0 +1,53 @@
+html, body {
+    width: 100% !important;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    vertical-align: top;
+}
+
+.image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+/*h2 {*/
+/*position: absolute;*/
+/*top: 300px;*/
+/*left: 0;*/
+/*width: 100%;*/
+/*color: #fff;*/
+/*font-family: Raleway;*/
+/*font-size: 4em;*/
+/*}*/
+div.image > h2 {
+    position: absolute;
+    top: 270px;
+    left: 2%;
+    width: 100%;
+    color: #fff;
+    font-family: Raleway;
+    font-size: 4em;
+}
+
+div.image > h3 {
+    position: absolute;
+    top: 525px;
+    left: 63%;
+    width: 100%;
+    color: #fff;
+    font-family: Raleway;
+    font-size: 2em;
+    word-wrap:break-word;
+}
+h3 span {
+    display: block;
+}
+h3 span::after {
+    content: "\A";
+    white-space: pre;
+}

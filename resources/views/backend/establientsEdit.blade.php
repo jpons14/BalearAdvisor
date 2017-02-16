@@ -46,6 +46,9 @@
                     <input type="text" name="preu" class="form-control" value="{{$establiments[0]->preu}}"/>
                 </div>
                 <div class="form-group">
+                    <input type="text" name="foto" placeholder="Nom de la foto" class="form-control" value="{{$establiments[0]->foto}}"/>
+                </div>
+                <div class="form-group">
                     <span class="text-warning col-md-12 text-center">Máximo 4 opciones</span>
                     <div class="col-md-3">
                         <select class="form-control tipuscuines" multiple name="">

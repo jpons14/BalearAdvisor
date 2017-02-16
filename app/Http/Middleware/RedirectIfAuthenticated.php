@@ -23,4 +23,13 @@ class RedirectIfAuthenticated
 
         return $next($request);
     }
+
+    public function isLogged( Request $request )
+    {
+        $value = $request->session()->all();
+        if (isset($value['login']) && $value['login'])
+            return;
+        else
+            return redirect('/login');
+    }
 }

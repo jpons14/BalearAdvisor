@@ -2,5 +2,5 @@
 @section('title', 'contacte')
 @section('contacteActive', 'active')
 @section('body')
-    <h1 class="text-center">Contact</h1>
+    <h1 class="text-center">Contacte</h1>
 @endsection

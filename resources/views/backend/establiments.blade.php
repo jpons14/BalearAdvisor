@@ -4,7 +4,7 @@
 @section('body')
     <div class="container">
         <div class="col-md-10">
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                 <tr>
                     <th>id</th>
@@ -40,4 +40,4 @@
             <a href="/establiments/create"><button class="btn btn-default">Crea un nou establiment</button></a>
         </div>
     </div>
-@endsection
+    @endsection

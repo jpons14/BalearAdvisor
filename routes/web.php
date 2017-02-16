@@ -13,11 +13,12 @@
 
 # Frontend
 
-
-Route::get('/', 'Frontend\FrontendController@index');
+Route::get('/', array('uses' => 'Frontend\FrontendController@index', 'as' => 'frontend.home'));
+Route::get('/comentaris', array('uses' => 'Frontend\FrontendController@comentaris', 'as' => 'frontend.comentaris'));
 Route::get('/restaurants', array('uses' => 'Frontend\FrontendController@restaurants', 'as' => 'frontend.restaurants'));
 Route::get('/contact', array('uses' => 'Frontend\FrontendController@contacte', 'as' => 'frontend.contact'));
 
+Route::get('/cifrar', 'LoginController@cifrarContrasenas');
 # Login
 
 Route::get('/login', 'LoginController@index');
@@ -80,3 +81,10 @@ Route::get('/backend/tipuscuina', 'Backend\TipusCuinaController@index');
 Route::get('/tipuscuina/edit/{id}', 'Backend\TipusCuinaController@edit');
 Route::post('/tipuscuina/update', 'Backend\TipusCuinaController@update');
 Route::get('/tipuscuina/delete/{id}', 'Backend\TipusCuinaController@delete');
+
+
+
+// Test
+Route::get('/slide', function(){
+    return view('frontend.slide');
+});

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\EstablimentModel;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,7 +14,13 @@ class FrontendController extends BaseController
 
     public function index(  )
     {
-        return view('frontend.index');
+        $establiment = EstablimentModel::all();
+        return view('frontend.index')->with('establiment', $establiment);
+    }
+
+    public function comentaris(  )
+    {
+        return view('frontend.comentaris');
     }
 
     public function restaurants(  )
